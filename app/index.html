@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Zapp placeholder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  var appname=urlParams.get('name');
+  var iconurl=urlParams.get('icon');
+  var downurl=urlParams.get('link');
+</script>
+<style>
+#alc,#applogo,#applogo img{width:128px;height:128px}body{margin:0;overflow:hidden}*{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";user-select:none;-webkit-user-select:none}span{font-size:20px;font-weight:700;text-align:center}#main{width:100vw;height:100vh}#alc{position:relative;padding:20px;margin-bottom:-10px;display:block}#applogo img{position:absolute;border-radius:25%}#applogob{filter:blur(10px);z-index:-1;border-radius:10px}#appinfo,#main{display:flex;flex-direction:column;align-items:center;justify-content:center;flex-wrap:nowrap;gap:10px}#footer,#footerlink{position:absolute;width:80px;bottom:10px;opacity:.75}#install{background:linear-gradient(180deg,#01b9ff 0,#007dfd 100%);color:#fff;font-weight:500;display:flex;font-size:24px;border:none;outline:0;border-radius:10px;padding:5px 10px;align-items:center;gap:5px;cursor:pointer;box-shadow:0 0 15px 5px rgba(0,154,254,.31)}#install *,#installa{text-decoration:none}#install>svg{width:24px;height:24px}#imagebad{width:128px;height:128px;display:flex;justify-content:center;align-items:center;background:#efefef;border-radius:25%}
+</style>
+<div id="main">
+  <div id="appinfo">
+    <div id="alc"><div id="applogo">
+      <img id="applogof" onerror="this.style.display='none';document.getElementById('imagebad').style.display='flex'">
+      <img id="applogob" onerror="this.style.display='none'">
+      <div id="imagebad" style="display:none;">
+        <svg style="fill:#494949" xmlns="http://www.w3.org/2000/svg" height="64px" viewBox="0 0 512 512">
+          <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/>
+        </svg>
+      </div>
+    </div></div>
+    <span id="apptitle"></span>
+    <a id="installa" target="_blank">
+      <button id="install">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="93.4 94.9774 326.2 288.1">
+          <path d="M 255.9 120.9 l 9.1 -15.7 c 5.6 -9.8 18.1 -13.1 27.9 -7.5 c 9.8 5.6 13.1 18.1 7.5 27.9 l -87.5 151.5 h 63.3 c 20.5 0 32 24.1 23.1 40.8 H 113.8 c -11.3 0 -20.4 -9.1 -20.4 -20.4 c 0 -11.3 9.1 -20.4 20.4 -20.4 h 52 l 66.6 -115.4 l -20.8 -36.1 c -5.6 -9.8 -2.3 -22.2 7.5 -27.9 c 9.8 -5.6 22.2 -2.3 27.9 7.5 l 8.9 15.7 z m -78.7 218 l -19.6 34 c -5.6 9.8 -18.1 13.1 -27.9 7.5 c -9.8 -5.6 -13.1 -18.1 -7.5 -27.9 l 14.6 -25.2 c 16.4 -5.1 29.8 -1.2 40.4 11.6 z m 168.9 -61.7 h 53.1 c 11.3 0 20.4 9.1 20.4 20.4 c 0 11.3 -9.1 20.4 -20.4 20.4 h -29.5 l 19.9 34.5 c 5.6 9.8 2.3 22.2 -7.5 27.9 c -9.8 5.6 -22.2 2.3 -27.9 -7.5 c -33.5 -58.1 -58.7 -101.6 -75.4 -130.6 c -17.1 -29.5 -4.9 -59.1 7.2 -69.1 c 13.4 23 33.4 57.7 60.1 104 z z z" fill="#fff"/>
+        </svg>
+        Install
+      </button>
+    </a>
+  </div>
+  <a id="footerlink" href="https://itsfoxdev.github.io/zapp/"><img id="footer" src="data:image/png;base64,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"></a>
+</div>
+<script>
+  document.getElementById('apptitle').innerHTML=appname;
+  document.getElementById('applogof').src=iconurl;
+  document.getElementById('applogob').src=iconurl;
+  document.getElementById('installa').href=downurl;
+</script>
+</body>
+</html>
